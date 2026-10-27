@@ -10,12 +10,12 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
 )
-logger = logging.getLogger("seevia")
+logger = logging.getLogger("zoodsle")
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Starting Seevia backend...")
+    logger.info("Starting ZoodSle backend...")
     logger.info("Configured LM Studio Base URL: %s", settings.lm_studio_base_url)
     logger.info("Configured Target Model: %s", settings.lm_studio_model)
     logger.info("Local-only mode active: %s", settings.is_local_endpoint)
@@ -25,13 +25,13 @@ async def lifespan(app: FastAPI):
             "Local privacy guarantee is NOT active."
         )
     yield
-    logger.info("Shutting down Seevia backend...")
+    logger.info("Shutting down ZoodSle backend...")
     from app.services.lm_studio_client import lm_studio_client
     await lm_studio_client.aclose()
 
 
 app = FastAPI(
-    title="Seevia",
+    title="ZoodSle",
     description="Privacy-first, local-inference visual accessibility API for blind and visually impaired users.",
     version="1.0.0",
     lifespan=lifespan
@@ -52,7 +52,7 @@ app.include_router(router)
 @app.get("/")
 def read_root():
     return {
-        "app": "Seevia",
+        "app": "ZoodSle",
         "version": "1.0.0",
         "local_ai": settings.is_local_endpoint,
         "model": settings.lm_studio_model,

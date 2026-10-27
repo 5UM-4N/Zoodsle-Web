@@ -418,7 +418,7 @@ export const App: React.FC = () => {
         }}
       >
         <p>
-          <strong>Seevia</strong> • Local accessibility tool (Press ? for keyboard shortcuts)
+          <strong>ZoodSle</strong> • Local accessibility tool (Press ? for keyboard shortcuts)
         </p>
         <p>
           Model: <code>{health?.configured_model || "qwen/qwen3-vl-4b"}</code> • Web Speech API

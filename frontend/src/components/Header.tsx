@@ -66,7 +66,7 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="brand-wrapper">
         <Eye aria-hidden="true" size={30} color="var(--accent-primary)" />
         <div>
-          <h1 className="brand-title">Seevia</h1>
+          <h1 className="brand-title">ZoodSle</h1>
           <p className="brand-tagline">Local photo assistant for blind and low-vision users</p>
         </div>
       </div>

@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     )
     api_key: Optional[str] = Field(
         default=None,
-        description="Optional API key for Seevia client authorization (X-Seevia-Key header)"
+        description="Optional API key for ZoodSle client authorization (X-ZoodSle-Key header)"
     )
     max_concurrency: int = Field(
         default=1,

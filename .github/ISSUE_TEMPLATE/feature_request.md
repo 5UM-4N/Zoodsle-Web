@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for Seevia
+about: Suggest an idea for ZoodSle
 title: "[FEATURE] "
 labels: enhancement
 assignees: ''

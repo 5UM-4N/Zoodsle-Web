@@ -10,10 +10,10 @@ from app.config import settings
 from app.services.image_validator import validate_and_process_image, SUPPORTED_FORMATS, detect_magic_format
 from app.services.lm_studio_client import lm_studio_client
 
-logger = logging.getLogger("seevia.api")
-router = APIRouter(prefix="/api", tags=["Seevia"])
+logger = logging.getLogger("zoodsle.api")
+router = APIRouter(prefix="/api", tags=["ZoodSle"])
 
-api_key_header = APIKeyHeader(name="X-Seevia-Key", auto_error=False)
+api_key_header = APIKeyHeader(name="X-ZoodSle-Key", auto_error=False)
 
 
 async def verify_client_access(
@@ -22,14 +22,14 @@ async def verify_client_access(
 ) -> bool:
     """
     Security gate for local AI inference endpoints:
-    1. If `api_key` is configured in settings, enforce that X-Seevia-Key matches.
+    1. If `api_key` is configured in settings, enforce that X-ZoodSle-Key matches.
     2. If `enforce_loopback_only` is active, verify that requests originate from loopback addresses.
     """
     if settings.api_key:
         if api_key != settings.api_key:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Unauthorized: Missing or invalid X-Seevia-Key header."
+                detail="Unauthorized: Missing or invalid X-ZoodSle-Key header."
             )
         return True
 
@@ -39,7 +39,7 @@ async def verify_client_access(
             logger.warning("Blocked non-loopback request from host: %s", client_host)
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
-                detail=f"Access denied: Seevia local inference is restricted to loopback addresses. Connected from {client_host}."
+                detail=f"Access denied: ZoodSle local inference is restricted to loopback addresses. Connected from {client_host}."
             )
 
     return True
@@ -112,7 +112,7 @@ async def list_models():
         "connected": health_data["connected"],
         "error": health_data["error"],
         "guide": (
-            "To use Seevia, download and load a vision-language model (such as qwen/qwen3-vl-4b) "
+            "To use ZoodSle, download and load a vision-language model (such as qwen/qwen3-vl-4b) "
             "in LM Studio, and ensure the local server is started at " + settings.lm_studio_base_url
         )
     }

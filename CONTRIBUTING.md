@@ -1,6 +1,6 @@
-# Contributing to Seevia
+# Contributing to ZoodSle
 
-Thank you for your interest in contributing to Seevia. This is a 100% local, privacy-first vision accessibility project.
+Thank you for your interest in contributing to ZoodSle. This is a 100% local, privacy-first vision accessibility project.
 
 ## Guiding Principles
 
@@ -17,7 +17,7 @@ Thank you for your interest in contributing to Seevia. This is a 100% local, pri
 └── frontend/     # React 19 + Vite web studio (drag-and-drop, speech, chat)
 ```
 
-*(Note: Browser extensions are hosted in their own dedicated repositories: [Seevia Safari](https://github.com/5UM-4N/seevia-safari) and [Seevia Chrome](https://github.com/5UM-4N/seevia-chromium)).*
+*(Note: Browser extensions are hosted in their own dedicated repositories: [ZoodSle Safari](https://github.com/5UM-4N/zoodsle-safari) and [ZoodSle Chrome](https://github.com/5UM-4N/zoodsle-chromium)).*
 
 ---
 

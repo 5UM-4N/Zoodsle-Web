@@ -5,11 +5,11 @@ import httpx
 from fastapi import HTTPException, status
 from app.config import settings
 
-logger = logging.getLogger("seevia.lm_studio")
+logger = logging.getLogger("zoodsle.lm_studio")
 
 # Core accessibility system prompts
 SYSTEM_PROMPT_CONCISE = (
-    "You are Seevia, an accessibility assistant specifically helping blind and visually impaired people "
+    "You are ZoodSle, an accessibility assistant specifically helping blind and visually impaired people "
     "understand photographs sent by family and friends.\n\n"
     "Generate a CONCISE, natural verbal description of the photograph in 2 to 4 sentences:\n"
     "1. State the central subject and overall scene immediately.\n"
@@ -23,7 +23,7 @@ SYSTEM_PROMPT_CONCISE = (
 )
 
 SYSTEM_PROMPT_DETAILED = (
-    "You are Seevia, an expert accessibility assistant providing a comprehensive, structured description "
+    "You are ZoodSle, an expert accessibility assistant providing a comprehensive, structured description "
     "of photographs for blind and visually impaired individuals.\n\n"
     "Provide a thorough, well-organized description divided into the following clear sections:\n\n"
     "### Overview\n"
@@ -43,7 +43,7 @@ SYSTEM_PROMPT_DETAILED = (
 )
 
 SYSTEM_PROMPT_CHAT = (
-    "You are Seevia, an accessibility assistant answering follow-up questions from a blind or visually impaired user "
+    "You are ZoodSle, an accessibility assistant answering follow-up questions from a blind or visually impaired user "
     "about the photograph they uploaded.\n\n"
     "- Answer the user's question directly, clearly, and concisely based strictly on the visual content of the photograph.\n"
     "- Use spatial descriptions (e.g., 'to your left', 'in the top-right corner') when helpful.\n"

@@ -28,7 +28,7 @@ describe("Header component", () => {
       />
     );
 
-    expect(screen.getByRole("heading", { name: /Seevia/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /ZoodSle/i })).toBeInTheDocument();
     expect(screen.getByText(/Ready \(qwen\/qwen3-vl-4b\)/i)).toBeInTheDocument();
   });
 

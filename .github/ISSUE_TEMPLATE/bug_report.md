@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help improve Seevia
+about: Create a report to help improve ZoodSle
 title: "[BUG] "
 labels: bug
 assignees: ''
@@ -10,8 +10,8 @@ assignees: ''
 **Component:**
 - [ ] Backend (FastAPI)
 - [ ] Frontend Web App (React)
-- [ ] Seevia Safari Extension
-- [ ] Seevia Chromium Extension
+- [ ] ZoodSle Safari Extension
+- [ ] ZoodSle Chromium Extension
 
 **Describe the bug:**
 A clear description of what the bug is.

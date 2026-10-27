@@ -1,4 +1,4 @@
-# Seevia Web Edition 👁️🔊
+# ZoodSle Web Edition 👁️🔊
 
 > **The Web, Understood Aloud.**  
 > *100% on-device visual accessibility assistant for blind and visually impaired users. Zero cloud tracking, zero latency, complete photo privacy.*
@@ -11,9 +11,9 @@
 
 ## 🌟 Overview
 
-**Seevia Web Edition** is a privacy-first web application designed to help blind, low-vision, and accessibility-conscious users understand personal photos shared by friends and family. 
+**ZoodSle Web Edition** is a privacy-first web application designed to help blind, low-vision, and accessibility-conscious users understand personal photos shared by friends and family. 
 
-Instead of routing sensitive personal photos to third-party cloud vision APIs, Seevia performs **100% of its visual reasoning locally on your own computer** using the 4-billion parameter multimodal model `qwen/qwen3-vl-4b` running in [LM Studio](https://lmstudio.ai).
+Instead of routing sensitive personal photos to third-party cloud vision APIs, ZoodSle performs **100% of its visual reasoning locally on your own computer** using the 4-billion parameter multimodal model `qwen/qwen3-vl-4b` running in [LM Studio](https://lmstudio.ai).
 
 ### Key Features
 * 🎙️ **Rich Audio Narration:** Built-in speech synthesis with configurable speech rate, pitch, and voice selection.
@@ -42,7 +42,7 @@ Instead of routing sensitive personal photos to third-party cloud vision APIs, S
 
 ---
 
-### Running Seevia Web
+### Running ZoodSle Web
 
 #### Step 1: Start the Local Backend
 Open your terminal and run:
@@ -77,7 +77,7 @@ npm run dev
 
 #### Step 3: Open in Browser
 Visit **`http://localhost:5173`** in your browser. 
-Drop any photo in or press `U` to select an image, and listen to Seevia describe it aloud!
+Drop any photo in or press `U` to select an image, and listen to ZoodSle describe it aloud!
 
 ---
 

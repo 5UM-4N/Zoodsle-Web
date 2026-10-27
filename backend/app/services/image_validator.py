@@ -6,7 +6,7 @@ from PIL import Image, UnidentifiedImageError
 from fastapi import HTTPException, status
 from app.config import settings
 
-logger = logging.getLogger("seevia.validator")
+logger = logging.getLogger("zoodsle.validator")
 
 # Supported image formats and corresponding MIME types
 SUPPORTED_FORMATS = {
@@ -60,7 +60,7 @@ def validate_and_process_image(file_bytes: bytes, filename: str = "upload") -> T
     if not magic_format:
         raise HTTPException(
             status_code=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            detail="Unsupported image format. Seevia accepts only JPEG, PNG, or WebP images."
+            detail="Unsupported image format. ZoodSle accepts only JPEG, PNG, or WebP images."
         )
 
     # 3. Deep image integrity check with Pillow

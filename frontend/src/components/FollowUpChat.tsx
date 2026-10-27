@@ -119,7 +119,7 @@ export const FollowUpChat: React.FC<FollowUpChatProps> = ({
               aria-label={`${msg.role === "user" ? "Your question" : "Answer"}: ${msg.content}`}
             >
               <div className="chat-bubble-header">
-                <span>{msg.role === "user" ? "You" : "Seevia"}</span>
+                <span>{msg.role === "user" ? "You" : "ZoodSle"}</span>
                 {msg.role === "assistant" && (
                   <button
                     type="button"

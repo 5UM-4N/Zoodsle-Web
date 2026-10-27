@@ -11,7 +11,7 @@ async def test_root_endpoint():
         res = await client.get("/")
     assert res.status_code == 200
     data = res.json()
-    assert data["app"] == "Seevia"
+    assert data["app"] == "ZoodSle"
     assert data["local_ai"] is True
 
 

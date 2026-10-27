@@ -38,7 +38,7 @@ async def test_loopback_allows_local_ips():
 
 @pytest.mark.asyncio
 async def test_api_key_authentication():
-    """When api_key is configured, X-Seevia-Key header must be validated."""
+    """When api_key is configured, X-ZoodSle-Key header must be validated."""
     orig_key = settings.api_key
     settings.api_key = "test-secret-key-12345"
     transport = ASGITransport(app=app, client=("127.0.0.1", 50000))
@@ -51,7 +51,7 @@ async def test_api_key_authentication():
             assert "Unauthorized" in res_missing.json()["detail"]
 
             # 2. Invalid header -> 401
-            res_invalid = await client.get("/api/health", headers={"X-Seevia-Key": "wrong-key"})
+            res_invalid = await client.get("/api/health", headers={"X-ZoodSle-Key": "wrong-key"})
             assert res_invalid.status_code == 401
 
             # 3. Valid header -> 200
@@ -65,7 +65,7 @@ async def test_api_key_authentication():
                     "available_models": [],
                     "error": None,
                 }
-                res_valid = await client.get("/api/health", headers={"X-Seevia-Key": "test-secret-key-12345"})
+                res_valid = await client.get("/api/health", headers={"X-ZoodSle-Key": "test-secret-key-12345"})
                 assert res_valid.status_code == 200
     finally:
         settings.api_key = orig_key
